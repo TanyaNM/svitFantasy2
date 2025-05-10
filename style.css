@@ -1,0 +1,125 @@
+/* Загальний стиль для фону і всього контенту */
+body {
+    background: #2b2d3b;
+    color: #e0d7b9;
+    font-family: 'Georgia', serif;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Загадковий фон */
+.mystical-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://img.freepik.com/premium-photo/epic-battle-knight-dragon-generativ-ai_790651-980.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+    animation: backgroundAnimation 60s linear infinite;
+}
+
+/* Анімація для фону */
+@keyframes backgroundAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Стиль для заголовків */
+header h1 {
+    font-size: 4em;
+    color: #ffcc00;
+    text-shadow: 0 0 15px #ffcc00, 0 0 30px #ffcc00;
+    margin-bottom: 20px;
+}
+
+/* Заголовок історії */
+.story-content h2 {
+    font-size: 3em;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+    margin-top: 50px;
+    animation: magicalGlow 3s infinite alternate;
+}
+
+/* Анімація для підсвічування */
+@keyframes magicalGlow {
+    0% { text-shadow: 0 0 5px #ffcc00; }
+    100% { text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00; }
+}
+
+/* Стиль для тексту історії */
+.story-text {
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+    font-size: 1.2em;
+    text-align: justify;
+    color: #f0e6d2;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ffcc00;
+}
+
+/* Кнопка повернення на головну */
+.back-btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #0b0c1a;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 30px;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #ff9900;
+    box-shadow: 0 0 20px #ffcc00;
+}
+
+/* Стиль для футера */
+footer {
+    position: absolute;
+    bottom: 10px;
+    color: #f0e6d2;
+    font-size: 1.2em;
+    opacity: 0.8;
+    z-index: 3;
+}
+
+/* Для адаптивності */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .story-content h2 {
+        font-size: 2em;
+    }
+}
+
+/* Світіння для імен героїв */
+.hero-name {
+    font-size: 1.4em;
+    color: #ffcc00;
+    text-shadow: 0 0 5px #ffcc00, 0 0 10px #ff9900;
+    animation: nameGlow 2s infinite alternate;
+    margin-top: 10px;
+}
+
+@keyframes nameGlow {
+    0% { text-shadow: 0 0 5px #ffcc00; }
+    100% { text-shadow: 0 0 15px #ffcc00, 0 0 30px #ff9900; }
+}
